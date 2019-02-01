@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<spider>
+<name>habrSpider</name>
+<start_url>https://habr.com/ru/all/</start_url>
+<format>xml</format>
+<encoding></encoding>
+<agent></agent>
+<selector>article.post_preview</selector>
+<nextselector></nextselector>
+<maxpage>2</maxpage>
+<nextpage>https://habr.com/ru/all/page</nextpage>
+<endselector></endselector>
+<properties>
+<property>
+<name>title</name>
+<before></before>
+<selector>h2.post__title a::text</selector>
+<after></after>
+<replace_filters></replace_filters>
+</property>
+<property>
+<name>url_post</name>
+<before></before>
+<selector>h2.post__title a::attr(href)</selector>
+<after></after>
+<replace_filters></replace_filters>
+</property>
+<property>
+<name>avtor</name>
+<before></before>
+<selector>span.user-info__nickname::text</selector>
+<after></after>
+<replace_filters></replace_filters>
+</property>
+<property>
+<name>date</name>
+<before></before>
+<selector>span.post__time::text</selector>
+<after></after>
+<replace_filters></replace_filters>
+</property>
+</properties>
+</spider>
