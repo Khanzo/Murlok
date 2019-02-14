@@ -24,8 +24,8 @@ Folder config_xml - samples config files:<br>
 - lenta_xml.xml<br>
 
 Configuration info:<br>
-- config_info_en.md<br>
-- config_info_rus.md<br>
+- config_info_en.txt<br>
+- config_info_rus.txt<br>
 
 TODO:<br>
 - Testing postgres<br>
