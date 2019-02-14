@@ -2,7 +2,17 @@
 <spider>
 <name>habrSpider</name>
 <start_url>https://habr.com/ru/all/</start_url>
-<format>xml</format>
+<format>sqlite</format>
+<peewee db="vkit.db" table="habr">
+<tablefields>
+<field name="title" property_name="title"></field>
+<field name="url_post" property_name="url_post"></field>
+<field name="date" property_name="date"></field>
+<field name="avtor" property_name="avtor"></field>
+<field name="published" property_name="" default="0" type="int"></field>
+<field name="cashe" property_name="" cashe_field="title"></field>
+</tablefields>
+</peewee>
 <encoding></encoding>
 <agent></agent>
 <selector>article.post_preview</selector>

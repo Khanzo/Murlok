@@ -29,9 +29,9 @@ def main():
     if _murlok.format in formats:
         settings.overrides['FEED_FORMAT'] = str(_murlok.format)
         settings.overrides['FEED_URI'] = str(_murlok.spider) + '.' + str(_murlok.format)
-        settings.overrides['ITEM_PIPELINES']='{"murlok.pipelines.MurlokPipeline": 300}'
     else:
         #Pippeline config peewee - pip install -U peewee
+        #format mysql, postg, sqlite
         settings.overrides['ITEM_PIPELINES']='{"murlok.pipelines.MurlokPipeline": 300}'
         pass
     

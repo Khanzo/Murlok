@@ -2,7 +2,20 @@
 <spider>
 <name>AllureSpider</name>
 <start_url>https://www.allure.com/beauty-products</start_url>
-<format>xml</format>
+<format>mysql</format>
+<peewee host="127.0.0.1" user="root" pass="" port="3306" charset="utf8mb4" db="vkit" table="news">
+<tablefields>
+<field name="title" property_name="title"></field>
+<field name="url_post" property_name="url_post"></field>
+<field name="url_img" property_name="url_img"></field>
+<field name="date" property_name="date"></field>
+<field name="categ" property_name="categ" default="news" type="str"></field>
+<field name="site" property_name="site"></field>
+<field name="tags" property_name="tags"></field>
+<field name="published" property_name="" default="0" type="int"></field>
+<field name="cashe" property_name="" cashe_field="title"></field>
+</tablefields>
+</peewee>
 <encoding></encoding>
 <agent></agent>
 <selector>section.site-body div.grid div.feature-item</selector>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<spider>
+<name>habrSpider</name>
+<start_url>https://habr.com/ru/all/</start_url>
+<format>mysql</format>
+<peewee host="127.0.0.1" user="root" pass="" port="3306" charset="utf8mb4" db="vkit" table="habr">
+<tablefields>
+<field name="title" property_name="title"></field>
+<field name="url_post" property_name="url_post"></field>
+<field name="date" property_name="date"></field>
+<field name="avtor" property_name="avtor"></field>
+<field name="published" property_name="" default="0" type="int"></field>
+<field name="cashe" property_name="" cashe_field="title"></field>
+</tablefields>
+</peewee>
+<encoding></encoding>
+<agent></agent>
+<selector>article.post_preview</selector>
+<nextselector></nextselector>
+<maxpage>2</maxpage>
+<nextpage>https://habr.com/ru/all/page</nextpage>
+<endselector></endselector>
+<properties>
+<property>
+<name>title</name>
+<before></before>
+<selector>h2.post__title a::text</selector>
+<after></after>
+<replace_filters></replace_filters>
+</property>
+<property>
+<name>url_post</name>
+<before></before>
+<selector>h2.post__title a::attr(href)</selector>
+<after></after>
+<replace_filters></replace_filters>
+</property>
+<property>
+<name>avtor</name>
+<before></before>
+<selector>span.user-info__nickname::text</selector>
+<after></after>
+<replace_filters></replace_filters>
+</property>
+<property>
+<name>date</name>
+<before></before>
+<selector>span.post__time::text</selector>
+<after></after>
+<replace_filters></replace_filters>
+</property>
+</properties>
+</spider>
