@@ -36,6 +36,7 @@ default - можно указать значение по умолчанию<br>
 Поле создания кэша, для создания уникального поля - name="cashe" - создает строку-кэш по значению поля cashe_field<br>
 
 Пример:<br>
+<code>
 <tablefields><br>
 <field name="title" property_name="title"></field><br>
 <field name="url_post" property_name="url_post"></field><br>
@@ -44,6 +45,7 @@ default - можно указать значение по умолчанию<br>
 <field name="published" property_name="" default="0" type="int"></field><br>
 <field name="cashe" property_name="" cashe_field="title"></field><br>
 </tablefields><br>
+</code>
 
 Затем идут поля настроек паука:<br>
 - <encoding></encoding> - можно указать кодировку, по умолчанию utf-8<br>
