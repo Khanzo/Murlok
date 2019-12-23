@@ -3,6 +3,7 @@ Scrapy spider very universal use xml config file.<br>
 Sample: python run_spider.py habr.xml<br>
 
 Use python 3.6.5<br>
+Scrapy 1.8.0<br>
 Install:<br>
 - pip install scrapy<br>
 - pip install -U peewee<br>
